@@ -20,7 +20,7 @@ public class StatsServiceTest {
     public void test2() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expectedMonth = 6;
+        long expectedMonth = 8;
         long actualMonth = service.maxSales(sales);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
@@ -40,8 +40,7 @@ public class StatsServiceTest {
     public void test4() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = sum / sales.length;
-        ;
+        long expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
         long actual = service.avgSales(sales);
 
         Assertions.assertEquals(expected, actual);
